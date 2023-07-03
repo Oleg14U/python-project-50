@@ -4,16 +4,22 @@ version = "0.1.0"
 description = "\"Show difference between two data files\""
 authors = ["Oleg14U <hohleghek@yandex.ru>"]
 readme = "README.md"
-packages = [{include = "gendiff"}]
+packages = [
+  { include = "gendiff" },
+]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10.4"
+PyYAML = "^6.0"
 
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+pytest = "^7.4.0"
+pytest-cov = "^3.0.0"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
 
 [tool.poetry.scripts]
 gendiff = "gendiff.scripts.gendiff:main"
