@@ -62,3 +62,7 @@ def build_stylish_iter(diff: dict, depth=0) -> str:
                 f'{" " * depth}    {dictionary["key"]}: {new_value}')
     lines.append(f'{" " * depth}}}')
     return '\n'.join(lines)
+
+
+def render_stylish(diff: dict) -> str:
+    return build_stylish_iter(diff)
